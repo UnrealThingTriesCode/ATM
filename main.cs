@@ -2,7 +2,6 @@ using System;
 using System.Threading;
 using System.Diagnostics;
 using System.ComponentModel;
-
 //creates a loop
 int i = 0;
 while (i < 5)
@@ -32,7 +31,6 @@ while (i < 5)
     {
         Console.WriteLine("Invalid user input, Please try again. Error: " + e.Message);
     }
-
     Console.Write("Succes! We are logging you in.");
     Thread.Sleep(500);
     Console.Write(".");
@@ -42,9 +40,7 @@ while (i < 5)
     Console.Write(". | Succes!");
     Thread.Sleep(200);
     Console.WriteLine();
-
-    double bal = 10000;
-
+    double bal = 10000; 
     Console.WriteLine("Press 1. to see balance");
     Console.WriteLine("Press 2. to withdraw balance");
     Console.WriteLine("Press 3. to deposit");
@@ -66,14 +62,10 @@ while (i < 5)
                 case 1:
                     Environment.Exit(0);
                     break;
-
                 case 2:
-
                     break;
-
             }
             break;
-
         case 2:
             //withdraw case
             Console.WriteLine("How much do you want to withdraw?");
@@ -82,7 +74,6 @@ while (i < 5)
             bal = newwithdrew;
             Console.WriteLine("Succes, current balance: " + bal);
             break;
-
         case 3:
             //deposit case
             Console.WriteLine("How much do you want to deposit?");
@@ -122,11 +113,7 @@ while (i < 5)
                     break;
             }
             break;
-
         case 4: //change pin case
-
-            break;
-            
+            break;            
     }
-
 }
