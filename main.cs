@@ -1,5 +1,4 @@
 //Version_Control [.NET 6]
-//todo compare pins and ask user to declare a starting pin
 //creates a loop
 int i = 0;
 while (i < 5)
