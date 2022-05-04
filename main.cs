@@ -1,5 +1,4 @@
 //Version_Control [.NET 6]
-
 //creates a loop
 int i = 0;
 while (i < 5)
@@ -29,7 +28,6 @@ while (i < 5)
     {
         Console.WriteLine("Invalid user input, Please try again. Error: " + e.Message);
     }
-
     Console.Write("Succes! We are logging you in.");
     Thread.Sleep(500);
     Console.Write(".");
@@ -39,9 +37,7 @@ while (i < 5)
     Console.Write(". | Succes!");
     Thread.Sleep(200);
     Console.WriteLine();
-
     double bal = 10000;
-
     Console.WriteLine("Press 1. to see balance");
     Console.WriteLine("Press 2. to withdraw balance");
     Console.WriteLine("Press 3. to deposit");
@@ -63,14 +59,10 @@ while (i < 5)
                 case 1:
                     Environment.Exit(0);
                     break;
-
-                case 2:
-
-                    break;
-
+                case 2:       
+                    break;   
             }
             break;
-
         case 2:
             //withdraw case
             Console.WriteLine("How much do you want to withdraw?");
@@ -78,8 +70,21 @@ while (i < 5)
             double newwithdrew = (bal - withdrew);
             bal = newwithdrew;
             Console.WriteLine("Succes, current balance: " + bal);
+            Console.WriteLine();
+            Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+            Console.WriteLine();
+            Console.WriteLine("Press 1. to exit.");
+            Console.WriteLine("Press 2. to return to the main menu.");
+            int c2 = int.Parse(Console.ReadLine());
+            switch (c2)
+            {
+                case 1:
+                    Environment.Exit(0);
+                    break;
+                case 2:
+                    break;
+            }
             break;
-
         case 3:
             //deposit case
             Console.WriteLine("How much do you want to deposit?");
@@ -119,7 +124,6 @@ while (i < 5)
                     break;
             }
             break;
-
         case 4: //change pin case
             Console.WriteLine("Do you want to change your PIN? [Y] [N]");
             string userInput = Console.ReadLine();
@@ -156,6 +160,5 @@ while (i < 5)
                 Console.WriteLine("Your PIN hasn't been changed, Redirecting you to the login page...");
                 break;
             }
-    }
-
+    } 
 }
