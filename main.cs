@@ -1,7 +1,5 @@
-using System;
-using System.Threading;
-using System.Diagnostics;
-using System.ComponentModel;
+//Version_Control [.NET 6]
+
 //creates a loop
 int i = 0;
 while (i < 5)
@@ -31,6 +29,7 @@ while (i < 5)
     {
         Console.WriteLine("Invalid user input, Please try again. Error: " + e.Message);
     }
+
     Console.Write("Succes! We are logging you in.");
     Thread.Sleep(500);
     Console.Write(".");
@@ -40,7 +39,9 @@ while (i < 5)
     Console.Write(". | Succes!");
     Thread.Sleep(200);
     Console.WriteLine();
-    double bal = 10000; 
+
+    double bal = 10000;
+
     Console.WriteLine("Press 1. to see balance");
     Console.WriteLine("Press 2. to withdraw balance");
     Console.WriteLine("Press 3. to deposit");
@@ -62,10 +63,14 @@ while (i < 5)
                 case 1:
                     Environment.Exit(0);
                     break;
+
                 case 2:
+
                     break;
+
             }
             break;
+
         case 2:
             //withdraw case
             Console.WriteLine("How much do you want to withdraw?");
@@ -74,6 +79,7 @@ while (i < 5)
             bal = newwithdrew;
             Console.WriteLine("Succes, current balance: " + bal);
             break;
+
         case 3:
             //deposit case
             Console.WriteLine("How much do you want to deposit?");
@@ -100,7 +106,7 @@ while (i < 5)
             Console.WriteLine("Succes! Your total balance is " + final);
             Console.WriteLine();
             Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-            Console.WriteLine();    
+            Console.WriteLine();
             Console.WriteLine("Press 1. to exit.");
             Console.WriteLine("Press 2. to return to the main menu.");
             int c3 = int.Parse(Console.ReadLine());
@@ -113,7 +119,43 @@ while (i < 5)
                     break;
             }
             break;
+
         case 4: //change pin case
-            break;            
+            Console.WriteLine("Do you want to change your PIN? [Y] [N]");
+            string userInput = Console.ReadLine();
+            if (userInput == "Y" || userInput == "y")
+            {
+                Console.WriteLine("What do you want your new PIN to be? (4-6 digits)");
+                string newpin = (Console.ReadLine());
+                try
+                {
+                    //Check if the pin is within 4-6 digit range
+                    while (newpin.Length > 6)
+                    {
+                        Console.WriteLine("Digit limit exceeded, please try again. ");
+                        newpin = Console.ReadLine();
+                    }
+                    //Checks if the pin is within 4-6 digit range
+                    while (newpin.Length < 4)
+                    {
+                        Console.WriteLine("Invalid pin code, please try again.");
+                        newpin = Console.ReadLine();
+                    }
+                    Console.WriteLine("Succes! Your new pin is: " + newpin);
+                    break;
+                }
+                //error handeling
+                catch (Exception e)
+                {
+                    Console.WriteLine("Invalid user input, Please try again. Error: " + e.Message);
+                    break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Your PIN hasn't been changed, Redirecting you to the login page...");
+                break;
+            }
     }
+
 }
