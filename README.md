@@ -4,7 +4,7 @@ My first C# project,
 Made with VisualStudio 2022
 
 TODO:
-- [ ] Save new pincode 
+- [ ] Save new pincode when changing the pincode via the main menu
 - [ ] Not require pincode when going to main menu
 - [ ] add a catch block to prevent instant termination of the program
 - [ ] different WriteLine when entering characters instead of numbers
