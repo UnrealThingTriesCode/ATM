@@ -1,10 +1,9 @@
 //Version_Control [.NET 6]
-
 bool i = false;
 Console.WriteLine("What pincode do you want to use for this session?");
 string mainpin = Console.ReadLine();
 if (mainpin.Length <= 6 && mainpin.Length >= 4)
-    {
+{
     Console.WriteLine("test");
     i = true;
 }
@@ -30,36 +29,32 @@ while (i == true)
             i = true;
             break;
         }
-        else
+       else
         {
-            Console.WriteLine("Wrong PIN code entered!");
             i = false;
+            Console.WriteLine("Wrong PIN code entered!");       
             Console.WriteLine("Try again? [y/n]");
-            string key = Console.ReadKey().Key.ToString();
-            if (Console.ReadKey().Key == "y") 
+            string key = Console.ReadLine();
+            string letteryes = ("y");
+            if (key == letteryes)
             {
                 i = true;
-                return;
+                continue;
             }
-            else
-            {
-                Console.WriteLine("Please enter either y(es) or n(o)!");
-            }
-            if (Console.ReadKey() == "n") 
+            if (key == "n")
             {
                 Environment.Exit(5);
             }
             else
             {
-                Console.WriteLine("Please enter either y(es) or n(o)!");
+                Environment.Exit(5);
             }
 
-
         }
-        
 
 
-    } while (i == false);
+
+    } while (i == true);
 
 
     Console.Write("Succes! We are logging you in.");
