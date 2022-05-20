@@ -1,10 +1,18 @@
-//Version_Control [.NET 6]
+using System;
+using System.Threading;
+
+namespace ConsoleApplication1
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            //Version_Control [.NET 6]
 bool i = false;
 Console.WriteLine("What pincode do you want to use for this session?");
 string mainpin = Console.ReadLine();
 if (mainpin.Length <= 6 && mainpin.Length >= 4)
 {
-    Console.WriteLine("test");
     i = true;
 }
 else
@@ -230,3 +238,7 @@ while (i == true)
     }
 }
 
+
+        }
+    }
+}
