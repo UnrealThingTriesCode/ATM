@@ -1,10 +1,31 @@
-//Version_Control [.NET 6]
-using System;
-using System.Threading;
 
-namespace ATM
+//remove line 2,3 '//' when using .NET 4.7.2
+//using System;
+//using System.Threading;
+
+//Build using .NET 6.0.300
+//Version_Control [.NET 6]
+
+/* TODO
+
+ Save new pincode when changing the pincode via the main menu
+ 
+ Not require pincode when going to main menu
+     
+ Add logout option
+ 
+ add a catch block to prevent instant termination of the program
+    
+ different WriteLine when entering characters instead of numbers
+
+ save edited balance to a general balance 'hub'
+     
+ add a database of accounts and balances
+ */
+
+namespace atmrider
 {
-    internal class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
@@ -90,7 +111,7 @@ while (i == true)
     Console.WriteLine("Press 4. to change PIN");
 
     int ch = int.Parse(Console.ReadLine());
-
+    
     switch (ch)
     {
         case 1:
@@ -218,6 +239,7 @@ while (i == true)
                         Console.WriteLine("Invalid pin code, please try again.");
 
                         newpin = Console.ReadLine();
+                        mainpin = newpin;
                     }
                     Console.WriteLine("Succes! Your new pin is: " + newpin);
 
@@ -237,8 +259,6 @@ while (i == true)
             }
     }
 }
-
-
         }
     }
 }
