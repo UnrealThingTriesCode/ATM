@@ -1,13 +1,13 @@
+//Version_Control [.NET 6]
 using System;
 using System.Threading;
 
-namespace ConsoleApplication1
+namespace ATM
 {
     internal class Program
     {
         public static void Main(string[] args)
         {
-            //Version_Control [.NET 6]
 bool i = false;
 Console.WriteLine("What pincode do you want to use for this session?");
 string mainpin = Console.ReadLine();
