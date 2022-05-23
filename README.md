@@ -1,8 +1,8 @@
 # ATM
 
-My first C# project, 
-Made with VisualStudio 2022
-Using .NET 6
+My first C# project   
+Made with VisualStudio 2022  
+Using .NET 6  
 
 TODO:
 - [ ] Save new pincode when changing the pincode via the main menu
