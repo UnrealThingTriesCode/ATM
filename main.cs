@@ -1,28 +1,17 @@
-
 //remove line 2,3 '//' when using .NET 4.7.2
-//using System;
-//using System.Threading;
+
 
 //Build using .NET 6.0.300
 //Version_Control [.NET 6]
-
-/* TODO
-
- Save new pincode when changing the pincode via the main menu
- 
- Not require pincode when going to main menu
-     
- Add logout option
- 
- add a catch block to prevent instant termination of the program
-    
- different WriteLine when entering characters instead of numbers
-
- save edited balance to a general balance 'hub'
-     
- add a database of accounts and balances
+/* todo
+Save new pincode when changing the pincode via the main menu
+[x] Not require pincode when going to main menu
+[x] Add logout option
+add a catch block to prevent instant termination of the program
+different WriteLine when entering characters instead of numbers
+save edited balance to a general balance 'hub'
+add a database of accounts and balances
  */
-
 namespace atmrider
 {
     public class Program
@@ -42,17 +31,30 @@ else
     i = false;
     Environment.Exit(5);
 }
+Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+Console.WriteLine("| Welcome to Labree Banking, Please enter your pincode. | ");
+Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+string pin = Console.ReadLine();
+Console.Write("Succes! We are logging you in.");
+
+Thread.Sleep(500);
+Console.Write(".");
+Thread.Sleep(500);
+Console.Write(".");
+Thread.Sleep(500);
+
+Console.Write(". | Succes!");
+
+Thread.Sleep(200);
+
+Console.WriteLine();
 //creates a loop
 while (i == true)
 {
     do
     {
-        Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-        Console.WriteLine("| Welcome to Labree Banking, Please enter your pincode. | ");
-        Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-
         //try catch block to prevent aborting the execution when invalid characters are entered
-        string pin = Console.ReadLine();
+        
         if (pin == mainpin)
         {
             i = true;
@@ -86,19 +88,7 @@ while (i == true)
     } while (i == true);
 
 
-    Console.Write("Succes! We are logging you in.");
 
-    Thread.Sleep(500);
-    Console.Write(".");
-    Thread.Sleep(500);
-    Console.Write(".");
-    Thread.Sleep(500);
-
-    Console.Write(". | Succes!");
-
-    Thread.Sleep(200);
-
-    Console.WriteLine();
 
     double bal = 10000;
 
@@ -109,6 +99,8 @@ while (i == true)
     Console.WriteLine("Press 3. to deposit");
 
     Console.WriteLine("Press 4. to change PIN");
+
+    Console.WriteLine("Press 5. to log out");
 
     int ch = int.Parse(Console.ReadLine());
     
@@ -257,6 +249,42 @@ while (i == true)
                 Console.WriteLine("Your PIN hasn't been changed, Redirecting you to the login page...");
                 break;
             }
+            case 5: //logout case
+                Console.WriteLine("Do you really want to log out? [Y/n]");
+                string logout = Console.ReadLine();
+                if (logout == "y" || logout == "Y")
+                {
+                    Console.Write("Logging you out");
+                    Thread.Sleep(400);
+                    Console.Write(".");
+                    Thread.Sleep(400);
+                    Console.Write(".");
+                    Thread.Sleep(400);
+                    Console.Write(".");
+                    Thread.Sleep(400);
+                    Console.Write(".");
+                    Thread.Sleep(400);
+                    Console.Write(".");
+                    Thread.Sleep(400);
+                    Console.WriteLine("Succes! Have a nice day.");
+                    Thread.Sleep(1000);
+                    Environment.Exit(0);
+                }
+
+                if (logout == "n" || logout == "N")
+                {
+                    Console.Write("Redirecting you to the main menu");
+                    Console.Write(".");
+                    Thread.Sleep(400);
+                    Console.Write(".");
+                    Thread.Sleep(400);
+                    Console.Write(".");
+                    Thread.Sleep(400);
+                    Console.WriteLine();
+                    
+                }
+
+                break;
     }
 }
         }
