@@ -1,16 +1,13 @@
-//remove line 2,3 '//' when using .NET 4.7.2
-
-
 //Build using .NET 6.0.300
 //Version_Control [.NET 6]
 /* todo
-Save new pincode when changing the pincode via the main menu
+[ ]Save new pincode when changing the pincode via the main menu
 [x] Not require pincode when going to main menu
 [x] Add logout option
-add a catch block to prevent instant termination of the program
-different WriteLine when entering characters instead of numbers
-save edited balance to a general balance 'hub'
-add a database of accounts and balances
+[ ]add a catch block to prevent instant termination of the program
+[ ]different WriteLine when entering characters instead of numbers
+[ ]save edited balance to a general balance 'hub'
+[ ]add a database of accounts and balances
  */
 namespace atmrider
 {
