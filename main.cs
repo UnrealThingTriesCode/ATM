@@ -28,9 +28,9 @@ else
     i = false;
     Environment.Exit(5);
 }
-Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-Console.WriteLine("| Welcome to Labree Banking, Please enter your pincode. | ");
-Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+Console.WriteLine("|§| Welcome to Labree Banking, Please enter your pincode. |§| ");
+Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 string pin = Console.ReadLine();
 Console.Write("Succes! We are logging you in.");
 
