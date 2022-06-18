@@ -13,3 +13,4 @@ TODO:
 - [ ] save edited balance to a general balance 'hub'
 - [x] Implement a feature to set pincode before the session
 - [ ] add a database of accounts and balances
+- [ ] cutting up the code in to functions
